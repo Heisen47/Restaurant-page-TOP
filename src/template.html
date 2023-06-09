@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <div class="desc">
+            <h3>The Best restaurant</h3>
+        </div>
+    </nav>
+
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="tab1">Home</button>
+            <button class="tab-button" data-tab="tab2" onclick="return false;">Menu</button>
+            <button class="tab-button" data-tab="tab3">Contact us</button>
+        </div>
+        <div class="tab-content">
+            <div id="tab1" class="tab-item active">
+                <h2>Welcome to the best restaurant</h2>
+                <p>Here you will get every kind of food you can dream of Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore iste tempore ratione, numquam fuga molestias.</p>
+            </div>
+            <div id="tab2" class="tab-item">
+                <h2>Here is the list of all our offerings</h2>
+                <div class="menu">
+                    <ul>
+                      <li>Margherita</li>
+                      <li>Formaggio</li>
+                      <li>Meat Town</li>
+                      <li>PASTA</li>
+                      <li>Lasagna</li>
+                      <li>Ravioli</li>
+                      <li>Spaghetti Classica`</li>
+                      <li>Today's Soup (ask the waiter)</li>
+                      <li>Bruschetta</li>
+                      <li>Garlic bread</li>
+                    </ul>
+                  </div>
+                </div>
+            
+            <div id="tab3" class="tab-item">
+                <p id="email">Email : <span>TheBestRestaurant@abc.com</span></p>
+                <span>Phone : 123456789</span>
+                <p>Please provide us with your valuable feedback in the email and you can use this for advanced booking</p>
+            </div>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabItems = document.querySelectorAll('.tab-item');
+
+        tabButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                tabItems.forEach((item) => {
+                    item.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+                tabButtons.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>

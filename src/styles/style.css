@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+    background-image: url(../assets/img1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    font-family: roboto;
+}
+
+.navbar {
+    opacity: 60%;
+    position: sticky;
+    background: maroon;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: bisque;
+    background-image: url(../assets/chef.svg);
+}
+
+.desc {
+    padding: 5px;
+    margin-left: 80px;
+    font-size: xx-large;
+}
+
+.tab-container {
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    background-color: brown;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: lightsalmon;
+}
+
+.tab-content .tab-item {
+    display: none;
+    padding: 20px;
+    background-color: #915757;
+    color: beige;
+}
+
+.tab-content .tab-item.active {
+    display: block;
+}
+
+.tab-item {
+    /* display: none; */
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.tab-item.active {
+    display: block;
+}
+
+.menu {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+#email{
+  font-weight: bold;  
+  font-size: larger;
+}
